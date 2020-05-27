@@ -1,59 +1,40 @@
 <!doctype html>
 <html lang="PT-BR">
   <head>
-    <title>Curso em Video</title>
+    <title>Eventos</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    
-    
   </head>
   <body>
-    
-    
-    <script>
-      var n1 = Number(prompt('Digite um número'))
-      var n2 = Number( prompt('Digite outro número'))
-      R = n1 + n2
-
-      alert(`A soma dos números ${n1} e ${n2} é ${R}`)
-
-    </script>
-    
-   <!-- 
-  <script>
-    var nome = prompt('Qual seu nome?')
-    document.write(`Meu nome é ${nome} e possui ${nome.length} letras`)
-  </script>
-  -->
-    
 
     
 
-      
-      <!--<h1>Olá, mundo!</h1>
-      <p>
-          Já me livrei da maldição
-      </p>
+
+
+
+      <h1>Somando valores</h1>
+      <input type="number" name="txtn1" id="txtn1"> x
+      <input type="number" name="txtn2" id="txtn2">
+      <input type="button" value="Multipicar" onclick="somar()">
+      <div id="res">Resultado</div>
+
       <script>
-          var num1 = Number (window.prompt('Digite um número'))
-          var num2 = Number (window.prompt('Digite outro número'))
-          var R = num1 + num2
-          alert('A soma entre estes números é '+ R)
+          function somar(){
+              var tn1 = window.document.getElementById('txtn1')
+              var tn2 = window.document.getElementById('txtn2')
+              var res = window.document.getElementById('res')
+              var n1 = Number(tn1.value)
+              var n2 = Number(tn2.value)
+              var s = n1 * n2
+              res.innerHTML = `A multiplicação entres os valores ${n1} e ${n2} é ${s}`
 
-          if(R<=6){
-            alert('O código está funcionando')
           }
-          else{
-            alert('O código continua funcionando')
-          }
-
       </script>
-    -->
+      
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

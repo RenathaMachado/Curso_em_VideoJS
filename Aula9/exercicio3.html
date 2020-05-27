@@ -1,59 +1,34 @@
 <!doctype html>
 <html lang="PT-BR">
   <head>
-    <title>Curso em Video</title>
+    <title>Dom</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    
-    
   </head>
+    <style>
+        body{
+            background:cadetblue;
+        }
+    </style>
   <body>
-    
-    
+
+    <h1>Meu documento</h1>
+    <p>
+        Eu vou <strong>aprender</strong> Java Script.
+    </p>
+
     <script>
-      var n1 = Number(prompt('Digite um número'))
-      var n2 = Number( prompt('Digite outro número'))
-      R = n1 + n2
-
-      alert(`A soma dos números ${n1} e ${n2} é ${R}`)
-
+        var cor = document.getElementsByTagName('p')[0]
+        cor.style.color= 'orange'
+        
+        
     </script>
-    
-   <!-- 
-  <script>
-    var nome = prompt('Qual seu nome?')
-    document.write(`Meu nome é ${nome} e possui ${nome.length} letras`)
-  </script>
-  -->
-    
 
-    
 
-      
-      <!--<h1>Olá, mundo!</h1>
-      <p>
-          Já me livrei da maldição
-      </p>
-      <script>
-          var num1 = Number (window.prompt('Digite um número'))
-          var num2 = Number (window.prompt('Digite outro número'))
-          var R = num1 + num2
-          alert('A soma entre estes números é '+ R)
-
-          if(R<=6){
-            alert('O código está funcionando')
-          }
-          else{
-            alert('O código continua funcionando')
-          }
-
-      </script>
-    -->
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

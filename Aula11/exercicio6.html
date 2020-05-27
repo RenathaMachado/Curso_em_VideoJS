@@ -1,59 +1,41 @@
 <!doctype html>
 <html lang="PT-BR">
   <head>
-    <title>Curso em Video</title>
+    <title>Condicional</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    
-    
   </head>
   <body>
-    
-    
-    <script>
-      var n1 = Number(prompt('Digite um número'))
-      var n2 = Number( prompt('Digite outro número'))
-      R = n1 + n2
 
-      alert(`A soma dos números ${n1} e ${n2} é ${R}`)
+    <div>Você nasceu em qual País?</div>
+      <input type="text" name="" id="txt"  placeholder="Digite aqui">
+      <input type="button" value="entrar" onclick="clique()" >
 
-    </script>
-    
-   <!-- 
-  <script>
-    var nome = prompt('Qual seu nome?')
-    document.write(`Meu nome é ${nome} e possui ${nome.length} letras`)
-  </script>
-  -->
-    
+      <div id="res">Resposta</div>
 
-    
-
-      
-      <!--<h1>Olá, mundo!</h1>
-      <p>
-          Já me livrei da maldição
-      </p>
       <script>
-          var num1 = Number (window.prompt('Digite um número'))
-          var num2 = Number (window.prompt('Digite outro número'))
-          var R = num1 + num2
-          alert('A soma entre estes números é '+ R)
-
-          if(R<=6){
-            alert('O código está funcionando')
-          }
-          else{
-            alert('O código continua funcionando')
-          }
-
+          function clique(){
+            
+            var opcao = document.getElementById('txt')
+            var R = document.getElementById('res')
+            var btn = (opcao.value)
+              
+              
+              if(btn=='Brasil'|| btn == 'BRASIL'){
+                R.innerHTML=('Você é brasileiro')  
+            }
+            
+             else{
+                R.innerHTML=('Você é estrangeiro')
+            }
+            }   
+            
       </script>
-    -->
+    
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

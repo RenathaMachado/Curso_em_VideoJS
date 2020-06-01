@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="PT-BR">
+  <head>
+    <title>Contador</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body style="background:rgb(38, 116, 180) ;" >
+      <style>
+
+          h2{
+              text-align: center;
+              color:white;
+              padding-top: 85px;
+              
+          }
+          #contagem{
+              background: rgb(196, 177, 177);
+              width: 500px;
+              height: 500px;
+              margin-left: 450px;
+              
+          }
+          #conteudo{
+            padding-top: 60px;
+          }
+          #contagem input{
+              margin-top: 30px;
+              
+          }
+
+          span{
+              margin-left: 20px;
+          }
+
+          .botao{
+              margin-top: 20px;
+              margin-left: 20px;
+          }
+
+          h5{
+            margin-left: 20px;
+            margin-top: 20px;
+          }
+
+      </style>
+
+    <h2>Vamos contar</h2>
+    <div id="contagem">
+      <div id="conteudo">
+        <span>Inicio</span> <input type="number" name="" id="inicio"><br>
+        <span>Fim</span> <input type="number" name="" id="fim"><br>
+        <span>Passo</span> <input type="number" name="" id="passo"><br>
+        <input class="btn btn-primary botao" type="button" value="Verificar" onclick="confirmar()">
+        <h5 id="resultado">Contando...</h5>
+      </div> 
+    </div>
+      <script>
+
+              
+          function confirmar(){
+              var num1 = document.getElementById('inicio')
+              var num2 = document.getElementById('fim')
+              var passo= document.getElementById('passo')
+              var res = document.getElementById('resultado')
+              var n1 = Number(num1.value)
+              var n2 = Number(num2.value)
+
+              while(n1<=n2){
+                res.innerHTML= (n1)
+                n1=n1+passo
+                
+              }
+               }
+
+               
+              
+          
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

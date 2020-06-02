@@ -46,13 +46,13 @@
         <div class="row">
             <div class="col d-flex justify-content-center">   
                 <div class="calculadora">
-                    <input id="resultado" type="text" id="calc" placeholder="0" class="form-control resultado" disabled="disabled">
+                    <input id="resultado" type="text"  placeholder="0" class="form-control resultado" disabled="disabled">
                     <br>   
                 
                     <div class="row">
                         <button type="button" class="btn btn-dark btn-lg limpar " onclick="botao('acao','C')">C</button>
                         <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="botao('acao','/')">/</button>
-                        <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="botao('acao','x')">x</button>
+                        <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="botao('acao','*')">X</button>
                     </div>    
                   
                     <div class="row">
@@ -85,28 +85,30 @@
 
     <script>
         function botao(tipo,valor){
-           if (tipo === acao){
+            if (tipo === 'acao'){
 
-           if (acao === 'C')
-                document.getElementById('resultado').value=''
-
-           }
-           if (acao === '/' || 'x' || '-' || '+' || '=' ||'.' ){
-            document.getElementById('resultado').value= 'valor'
-            
-           }
-
-           if(valor === '='){
-            var visor = eval(document.getElementById('resultado').value)
-            document.getElementById('resultado').value=visor
+            if(valor === "C"){
+                //limpar o visor id resultado
+                document.getElementById('resultado').value= ''
             }
-
-            else if (tipo === 'valor'){
-                
+            if(valor === '/' || valor === '*' || valor === '-' || valor ==='+' || valor ==='.' ){
+                document.getElementById('resultado').value += valor
             }
+            if(valor==='='){
+                var valor_campo = document.getElementById('resultado').value
+                document.getElementById('resultado').value=(eval(valor_campo))
+            }
+           }
 
-        }
-        
+           else if(tipo==='valor'){
+               //para os valores serem acrescidos um ao lado do outro
+              // var valor_campo= document.getElementById('resultado').value   (forma de baixo torna o código mais enxuto)
+                // neste caso valor '0' (string) já contido vai ser acrescido mais o valor digitado. 
+               document.getElementById('resultado').value += valor
+           }
+
+
+           }   
     </script>
 
       

@@ -56,7 +56,7 @@
         <span>Fim</span> <input type="number" name="" id="fim"><br>
         <span>Passo</span> <input type="number" name="" id="passo"><br>
         <input class="btn btn-primary botao" type="button" value="Verificar" onclick="confirmar()">
-        <h5 id="resultado">Contando...</h5>
+        <h5 id="resultado">Processando a contagem </h5>
       </div> 
     </div>
       <script>
@@ -67,16 +67,28 @@
               var num2 = document.getElementById('fim')
               var passo= document.getElementById('passo')
               var res = document.getElementById('resultado')
-              var n1 = Number(num1.value)
-              var n2 = Number(num2.value)
+              
 
-              while(n1<=n2){
-                res.innerHTML= (n1)
-                n1=n1+passo
+              if(num1.value.length==0 || num2.value.length ==0|| passo.value.length==0){
+                alert("Favor inserir os dados necessários")
+              } else{
+                res.innerHTML='contando... <br>' 
+                var n1 = Number(num1.value)
+                var n2 = Number(num2.value)
+                var p =  Number(passo.value)
+
+                for(var i =n1; i>n2; i -= p){ 
+                res.innerHTML +=`${i} \u{1F449}`
+              }
+                for(var i =n1; i<=n2; i += p){
+                  res.innerHTML +=`${i} \u{1F449}` 
+                }
                 
               }
-               }
-
+              res.innerHTML += `\u{1F646}`
+              }
+             
+              
                
               
           

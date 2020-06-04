@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+
+    <style>
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        section{
+            width: 600px;
+            height: 400px;
+            background: floralwhite;
+            margin:auto;
+            box-shadow: 5px 5px 10px rgb(80, 76, 76);
+        }
+
+        header{
+            text-align: center;
+            font-size: 50px;
+            color: floralwhite;
+
+        }
+
+        .verificador{
+            padding-left: 20px;
+            padding-top: 20px;
+            
+        }
+
+        
+    </style>
+    
+</head>
+<body style="background: dodgerblue;">
+    <header>Verificador de idade</header>
+
+    <section>
+        <div class="verificador">
+            <p>Ano de Nascimento: <input type="number" name="" id="ano"></p>
+            <span>Sexo:</span> <input type="radio" name="" id="masc"><span>Masculino</span> 
+            <span><input type="radio" name="" id="fem"><span>Feminino</span></span> <br> <br>
+            <input type="button" value="Verificador" onclick="periodo_idade()">
+            
+        </div>
+    </section>
+
+    <script>
+
+        function periodo_idade() { 
+        var ano_nasc = document.getElementById('ano')
+        var sexo = document.getElementById('masc', 'fem')
+
+        if(ano_nasc.value.length == 0 || sexo.value.length==0){
+        alert('Favor digite um valor válido')  
+        }  
+
+        if(ano_nasc>2020){
+            alert('Digite um ano válido')
+        } else{
+            var ano = Number(ano_nasc.value)
+
+        }
+    }
+
+    </script>
+
+</body>
+</html>

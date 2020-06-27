@@ -25,12 +25,11 @@
             text-align: center;
             color: cornsilk;
             font-size: 50px;
-
             
         }
     </style>
   </head>
-  <body style="background: cornflowerblue;" onload="carregar()" >
+  <body onload="carregar()" style="background: cornflowerblue;"  >
 
     <header>Hora do dia</header>
 
@@ -39,8 +38,8 @@
           Aqui vai aparecer a mensagem
 
         </div>
-        <div>
-          <img id="imagem"src="img/logo.png" alt="Foto do dia">
+        <div id="imagem">
+          <img  src="img/manha.png" alt="">
         </div>
     </section>
 
@@ -53,6 +52,20 @@
       var hora = data.getHours()
       mensagem.innerHTML=`Agora são ${hora} horas`
 
+      if (hora>=0 && hora<12){
+        
+        foto.src= 'manha.png'
+      }  
+
+      else if (hora>=12 && hora<18){
+        
+        foto.src = 'tarde.png'
+      }
+
+      else{
+        
+        foto.src='noite.png'
+      }
     }
     </script>
 

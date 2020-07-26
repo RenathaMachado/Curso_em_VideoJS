@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="PT-BR">
   <head>
-    <title>Tabela idade</title>
+    <title>Hora do dia</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,7 +17,6 @@
             height: 400px;
             background: cornsilk;
             margin-left: 400px;
-            
         }
 
         header{
@@ -25,10 +24,47 @@
             text-align: center;
             color: cornsilk;
             font-size: 50px;
-            
+        }
+
+        #imagem{
+          text-align: center;
+          padding-top: 50px;
+        }
+
+        #msg{
+          text-align: center;
+          padding-top: 20px;
         }
     </style>
+
+<script>
+
+  function carregar(){ 
+  var mensagem = document.getElementById('msg')
+  var foto = document.getElementById('imagem')
+  var data = new Date()
+  var hora = data.getHours()
+  var minutos = data.getMinutes()
+  mensagem.innerHTML=`Agora são ${hora} horas e ${minutos} minutos`
+    
+  if (hora>=0 && hora<12){
+    foto.innerHTML = '<img src="img/manha.png">' 
+    document.body.style.background = '#ffe658'  
+
+  } else if (hora>=12 && hora<18){
+    foto.innerHTML = '<img src="img/tarde.png">'
+    document.body.style.background = '#d46815'
+  }
+  else{
+    foto.innerHTML = '<img src="img/noite.png">'
+    document.body.style.background = '#57585c'
+  }
+
+
+}
+</script>
   </head>
+
   <body onload="carregar()" style="background: cornflowerblue;"  >
 
     <header>Hora do dia</header>
@@ -43,31 +79,7 @@
         </div>
     </section>
 
-    <script>
-
-      function carregar(){ 
-      var mensagem = document.getElementById('msg')
-      var foto = document.getElementById('imagem')
-      var data = new Date()
-      var hora = data.getHours()
-      mensagem.innerHTML=`Agora são ${hora} horas`
-
-      if (hora>=0 && hora<12){
-        
-        foto.src= 'manha.png'
-      }  
-
-      else if (hora>=12 && hora<18){
-        
-        foto.src = 'tarde.png'
-      }
-
-      else{
-        
-        foto.src='noite.png'
-      }
-    }
-    </script>
+    
 
 
       

@@ -72,7 +72,7 @@
         </div>
 
         <div id="imagem">
-            <img src="img/crianca_menina.png" alt="">
+            <img src=" " alt="">
         </div>
     </section>
 
@@ -86,18 +86,30 @@
 
         if (fano.value.length == 0 || fano.value >= ano ) {
             window.alert('Valor inválido')
+
         }else{
            let sexo = document.getElementsByName('sexo') 
            let idade = ano - Number(fano.value)
            let foto = document.getElementById('imagem')
+           let genero = '' 
 
-           resposta.innerHTML = `Você tem ${idade} anos`
+           if(sexo == idade[0].checked) {
+               genero = document.getElementById('mas')
+            if(idade >=0 && idade <=12){}
+
+           }
+
+           if(sexo == idade[1].checked) {
+            genero =  genero = document.getElementById('fem')
+
+            }
+
+           
+
+
         }
 
-        
-
-
-    }
+     }
 
     </script>
 

@@ -11,7 +11,7 @@
         }
         section{
             width: 600px;
-            height: 400px;
+            height: 500px;
             background: floralwhite;
             margin:auto;
             box-shadow: 5px 5px 10px rgb(80, 76, 76);
@@ -30,6 +30,18 @@
             
         }
 
+        #res{
+            padding-top: 20px;
+            padding-left: 15px;
+        }
+
+        #imagem{
+            text-align: center;
+        }
+
+
+       
+
         
     </style>
     
@@ -39,30 +51,52 @@
 
     <section>
         <div class="verificador">
-            <p>Ano de Nascimento: <input type="number" name="" id="ano"></p>
-            <span>Sexo:</span> <input type="radio" name="" id="masc"><span>Masculino</span> 
-            <span><input type="radio" name="" id="fem"><span>Feminino</span></span> <br> <br>
-            <input type="button" value="Verificador" onclick="periodo_idade()">
-            
+            <p>Ano nascimento:
+                <input type="number" name="ano" id="ano" min="0">
+            </p>
+
+            <p>Sexo:
+                <input type="radio" name="sexo" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="sexo" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+
+            <p>
+                <input type="button" value="Verificar" onclick="periodo_idade()">
+            </p>
+
+            <p id="res">
+                Preencha todos os dados
+            </p>
+        </div>
+
+        <div id="imagem">
+            <img src="img/crianca_menina.png" alt="">
         </div>
     </section>
 
     <script>
 
         function periodo_idade() { 
-        var ano_nasc = document.getElementById('ano')
-        var sexo = document.getElementById('masc', 'fem')
+        let data = new Date()
+        let ano = data.getFullYear()
+        let fano = document.getElementById('ano') 
+        let resposta = document.getElementById('res')
 
-        if(ano_nasc.value.length == 0 || sexo.value.length==0){
-        alert('Favor digite um valor válido')  
-        }  
+        if (fano.value.length == 0 || fano.value >= ano ) {
+            window.alert('Valor inválido')
+        }else{
+           let sexo = document.getElementsByName('sexo') 
+           let idade = ano - Number(fano.value)
+           let foto = document.getElementById('imagem')
 
-        if(ano_nasc>2020){
-            alert('Digite um ano válido')
-        } else{
-            var ano = Number(ano_nasc.value)
-
+           resposta.innerHTML = `Você tem ${idade} anos`
         }
+
+        
+
+
     }
 
     </script>

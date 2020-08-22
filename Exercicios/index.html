@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de números</title>
+
+    <style>
+
+        h1{
+            text-align: center;
+            color: cornsilk;
+            font-size: 2.5em;
+        }
+
+        #caixa{
+            margin: auto;
+            height: 500px;
+            width: 450px;
+            background-color: rgb(184, 180, 174);
+            border-radius: 5px;
+            
+        }
+
+        select{
+            width: 150px;
+            height: 200px;
+        }
+
+        p{
+            padding-top: 50px;
+            padding-left: 5px;
+        }
+
+       
+    </style>
+
+    <script>
+        
+        
+        
+        function incluir(){
+            
+            let num = (document.getElementById('fnum').value)
+            let itens = (document.getElementById('item').value)
+            let listaNum = Array(num)
+
+            
+        if(num.value > 0 || num.value<=100){
+               for(let pos in listaNum){
+                   
+               }
+        }
+            
+            
+
+        }
+
+    </script>
+
+</head>
+<body style="background: rgb(119, 119, 243);">
+
+    <h1>Analisador de números</h1>
+    <div id="caixa">
+        <p>Número (entre 1 e 100):<input type="number" name="" id="fnum"><input type="button" value="Adicionar" onclick="incluir()"></p> 
+        <select name="" id="item" size="6"></select><br>
+        <input type="button" value="Finalizar">
+    </div>
+    <div id="res">
+
+    </div>
+    
+    
+</body>
+</html>       

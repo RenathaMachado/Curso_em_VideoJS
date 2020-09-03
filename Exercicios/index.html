@@ -43,18 +43,17 @@
             
             let num = (document.getElementById('fnum').value)
             let itens = (document.getElementById('item').value)
-            let listaNum = Array(num)
+            itens = Array()
 
+            if (num>0 && num<=100){
+                itens = num
+                console.log(itens)
+               //for(let i = 0; i<itens.length ; i++)
+               //console.log(itens[i])
+            }
             
-        if(num.value > 0 || num.value<=100){
-               for(let pos in listaNum){
-                   
-               }
-        }
             
-            
-
-        }
+         }
 
     </script>
 

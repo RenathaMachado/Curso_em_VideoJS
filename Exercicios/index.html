@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,25 +37,28 @@
 
     <script>
 
-        function isnumero(n){
-
-        }
+       
         
         
         
         function incluir(){
             
-            let num = (document.getElementById('fnum').value)
-            let itens = (document.getElementById('item').value)
+            let num = Number(document.getElementById('fnum').value)
+            let itens = Number(document.getElementById('item').value)
             let res = (document.getElementById('res').value)
-            let valores = []
+            
 
-            if(isnumero(num.value) && )
+            if(num != 0 ){
+                itens = num
+                itens.appendChild(num)
+            }
+            else{
+                alert("Número inválido")
+            }
 
             
-            
-            
-         }
+
+        }
 
     </script>
 
